@@ -1,6 +1,6 @@
 # Koro Sensei Chrome Extension
 
-This project is a Chrome extension that uses the Mistral API to provide an interactive learning experience. The extension features a chatbot persona of Koro Sensei, designed to guide users through problem-solving using the Socratic method.
+This project is a Chrome extension that uses the Mistral API to provide an interactive learning experience. The extension features a chatbot persona of Koro Sensei, designed to guide users through questions.
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -57,7 +57,7 @@ Once the extension is loaded, you can start testing its functionality. Open the 
 If you want to run a local development server for testing, use the following command:
 
 ```bash
-npm start
+node server2.js
 ```
 
 This will start the server on `http://localhost:5000`, and any changes made to the source code will automatically reload the extension.
@@ -134,3 +134,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### work in progress :
+Integrating Google's gemini API too as an alternative and many other models for the user to pick.
