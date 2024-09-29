@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Koro Sensei",
+  "description": "I have to destroy the earth, but first let me teach you.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Ummm Sensei?"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "http://localhost:5000/"
+  ]
+}
