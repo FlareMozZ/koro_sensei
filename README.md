@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+Chrome Extension Setup for Koro Sensei
+This document outlines the steps to set up the Koro Sensei Chrome extension. Follow these instructions to get your development environment ready and load the extension in Chrome.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prerequisites
+Make sure you have the following installed on your system:
 
-## Available Scripts
+Node.js (v14 or higher)
+npm (Node package manager)
+Getting Started
+1. Clone the Repository
+First, clone the project repository to your local machine:
 
-In the project directory, you can run:
+bash
+Copy code
+git clone <repository-url>
+cd koro_sensei
+2. Install Dependencies
+Install the required dependencies for the project using npm. These include Mistral, CORS, Axios, CRACO, express, and other necessary packages. Run the following command:
 
-### `npm start`
+bash
+Copy code
+npm install @mistralai/mistralai cors axios @craco/craco express
+3. Configure Environment Variables
+Create a .env file in the root of your project directory and add your API keys and any other required configurations. The structure should look like this:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+makefile
+Copy code
+API_KEY=your_mistral_api_key
+PORT=5000
+4. Build the Extension
+Once the dependencies are installed and the environment is configured, build the extension for production. This will create a build folder containing the packaged extension files:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+npm run build
+5. Load Unpacked Extension in Chrome
+To load your unpacked extension in Google Chrome, follow these steps:
 
-### `npm test`
+Open Chrome and go to the Extensions page by entering chrome://extensions/ in the address bar.
+Enable "Developer mode" by toggling the switch in the top right corner.
+Click on the "Load unpacked" button.
+Select the build folder generated in the previous step.
+6. Testing the Extension
+Once the extension is loaded, you can start testing its functionality. Open the extension from the Chrome toolbar and interact with it to see how it works.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. Running the Development Server
+If you want to run a local development server for testing:
 
-### `npm run build`
+bash
+Copy code
+npm start
+This will start the server on http://localhost:5000, and any changes made to the source code will automatically reload the extension.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Troubleshooting
+Build Issues: If you encounter issues while building, ensure that all dependencies are correctly installed and your environment variables are properly set.
+CORS Issues: If you face CORS errors while making API calls, make sure the server is configured to allow requests from your extension.
+Additional Resources
+Mistral Documentation
+CORS Documentation
+CRACO Documentation
